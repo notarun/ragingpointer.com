@@ -1,15 +1,12 @@
 # Package Manager
 PM = npm
 
-all: dep clean site
+all: node_modules site
 
-dep:
+node_modules:
 	$(PM) install
 
-site:
+site: node_modules
 	$(PM) run build
 
-clean:
-	rm -rf site
-
-.PHONY: all dep clean
+.PHONY: all
