@@ -1,0 +1,15 @@
+{
+  "name": "ragingpointer.com",
+  "version": "0.0.0",
+  "description": "Do pointers make you rage?",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/notarun/ragingpointer.com.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "Arun S. Negi",
+  "license": "MIT"
+}
