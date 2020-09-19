@@ -5,7 +5,6 @@
     "type": "git",
     "url": "git://github.com/notarun/ragingpointer.com.git"
   },
-  "main": "index.js",
   "author": "Arun S. Negi",
   "license": "MIT",
   "dependencies": {

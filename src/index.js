@@ -1,17 +1,10 @@
 #!/usr/bin/env node
 
-//                      _                         _       __
-//    _________ _____ _(_)___  ____ _____  ____  (_)___  / /____  _____
-//   / ___/ __ `/ __ `/ / __ \/ __ `/ __ \/ __ \/ / __ \/ __/ _ \/ ___/
-//  / /  / /_/ / /_/ / / / / / /_/ / /_/ / /_/ / / / / / /_/  __/ /
-// /_/   \__,_/\__, /_/_/ /_/\__, / .___/\____/_/_/ /_/\__/\___/_/
-//            /____/        /____/_/
-
 const fs = require('fs');
 const path = require('path');
 const snarkdown = require('snarkdown');
 const { Markup } = require('razorleaf');
-const templates = require('./src/templates');
+const templates = require('./templates');
 
 const DIR = {
   source: 'src/content',
