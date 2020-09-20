@@ -7,7 +7,7 @@ GIT_REPO = https://github.com/notarun/ragingpointer.com
 
 all: node_modules $(OUT)
 
-node_modules:
+node_modules: package.json
 	@echo "Installing dependencies"
 	$(NPM) install
 
@@ -28,6 +28,5 @@ deploy: clean $(OUT)
 	&& git commit -m "Deploy to gh-pages @ $(COMMIT_HASH)" \
 	&& git remote add origin $(GIT_REPO) \
 	&& git push --force origin master:gh-pages
-
 
 .PHONY: all clean deploy
