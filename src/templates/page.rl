@@ -10,8 +10,13 @@ append head
   else
     title "ragingpointer"
 
-append body
+append content
   if data.attributes.title
     h1 "#{data.attributes.title}"
 
-  !"#{data.body}"
+  if (!data.attributes.isHomepage)
+    time
+      "#{data.attributes.createdAt}"
+
+  div class: "main-content"
+    !"#{data.body}"

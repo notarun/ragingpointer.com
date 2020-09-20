@@ -1,7 +1,6 @@
 <!--
 {
   "title": "hello, world!",
-  "isHomepage": true,
   "createdAt": "Sep 19 2020"
 }
 -->

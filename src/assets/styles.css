@@ -1,4 +1,4 @@
-/* stolen from https://jrl.ninja/etc/ */
+/* based on https://jrl.ninja/etc/ */
 
 body {
   font-family: Liberation Sans, Arial, sans-serif;
@@ -9,6 +9,11 @@ body {
   max-width: 70ch;
   padding: 2ch;
   margin: auto;
+  color: #363636;
+}
+
+h1 {
+  color: #333;
 }
 
 a {
@@ -28,4 +33,17 @@ ul {
 
 li {
   margin-bottom: 0.5rem;
+}
+
+time {
+  font-size: 0.8em;
+  color: #aaaaaa;
+}
+
+.article time {
+  float: right;
+}
+
+.main-content {
+  padding: 1.5rem 0;
 }

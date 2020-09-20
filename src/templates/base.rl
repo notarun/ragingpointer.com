@@ -10,4 +10,5 @@ doctype html
 
   body
     main
-      block body
+      section
+        block content
