@@ -4,6 +4,9 @@ append head
   if data.attributes.title
     title "#{data.attributes.title} - ragingpointer"
 
+  elif data.attributes.is404
+    title "404 - page not found"
+
   elif data.attributes.isHomepage
     title "home - ragingpointer"
 
@@ -14,7 +17,7 @@ append content
   if data.attributes.title
     h1 "#{data.attributes.title}"
 
-  if (!data.attributes.isHomepage)
+  if data.attributes.createdAt
     time
       "#{data.attributes.createdAt}"
 
