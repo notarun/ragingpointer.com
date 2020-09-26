@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const snarkdown = require('snarkdown');
 const { Markup } = require('razorleaf');
-const templates = require('./templates');
+const resources = require('./resources');
 
 const DIR = {
   source: 'src/content',
@@ -71,7 +71,7 @@ function handleFile(file) {
   if (!fs.existsSync(outputdir)) fs.mkdirSync(outputdir, { recursive: true });
 
   if (isMd) {
-    fs.writeFileSync(output, templates.page(frontmatter));
+    fs.writeFileSync(output, resources.page(frontmatter));
   } else  {
     fs.copyFileSync(input, output);
   }
@@ -85,7 +85,7 @@ function createIndex(indexof, posts) {
   const input = path.join(DIR.source, indexof);
   const output = path.join(DIR.output, indexof, 'index.html');
 
-  fs.writeFileSync(output, templates.posts({ posts }));
+  fs.writeFileSync(output, resources.posts({ posts }));
   log(`${input} => ${output}`);
 
   return { input, output };

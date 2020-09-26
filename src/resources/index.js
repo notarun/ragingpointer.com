@@ -3,7 +3,7 @@ const { Markup } = require('razorleaf');
 const DirectoryLoader = require('razorleaf/directory-loader');
 
 const globals = {
-  stylesheet: Markup.unsafe(fs.readFileSync('src/assets/styles.css', {
+  stylesheet: Markup.unsafe(fs.readFileSync('src/resources/styles.css', {
     encoding: 'utf8'
   }))
 };

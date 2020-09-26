@@ -17,6 +17,7 @@ $(OUT): node_modules $(SRC)
 	node src/index.js
 
 clean:
+	@echo "Cleaning"
 	rm -rf $(OUT) node_modules
 
 # adapted from https://blog.bloomca.me/2017/12/15/how-to-push-folder-to-github-pages.html
