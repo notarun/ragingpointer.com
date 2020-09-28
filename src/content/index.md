@@ -1,5 +1,7 @@
 <!--
 {
+  "title": "home",
+  "description": "Arun Negi's (@notarun) homepage.",
   "isHomepage": true
 }
 -->

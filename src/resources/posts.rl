@@ -1,7 +1,10 @@
 extends base
 
 append head
-  title "posts - ragingpointer"
+  meta name: "title" content: "posts - #{siteName}"
+  meta name: "description" content: "Random thoughts, notes and trash"
+
+  title "posts - #{siteName}"
 
 append content
   h1 "random thoughts, notes and trash"

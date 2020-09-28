@@ -5,7 +5,8 @@ const DirectoryLoader = require('razorleaf/directory-loader');
 const globals = {
   stylesheet: Markup.unsafe(fs.readFileSync('src/resources/styles.css', {
     encoding: 'utf8'
-  }))
+  })),
+  siteName: 'ragingpointer'
 };
 
 const templateLoader = new DirectoryLoader(__dirname);
