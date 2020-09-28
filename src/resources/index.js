@@ -10,5 +10,7 @@ const globals = {
 
 const templateLoader = new DirectoryLoader(__dirname);
 
-exports.page = templateLoader.load('page', { globals });
-exports.posts = templateLoader.load('posts', { globals });
+module.exports.template = {
+  page: templateLoader.load('page', { globals }),
+  posts: templateLoader.load('posts', { globals })
+};
