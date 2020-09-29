@@ -9,7 +9,7 @@ append head
 append content
   h1 "random thoughts, notes and trash"
 
-  for post of data.posts
+  for post of sortPostsByDate(data.posts)
     div class: "article"
       a href: "#{post.uri}"
         "#{post.frontmatter.attributes.title}"
