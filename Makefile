@@ -18,7 +18,7 @@ $(OUT): node_modules $(SRC)
 
 clean:
 	@echo "Cleaning"
-	rm -rf $(OUT) node_modules
+	rm -rf $(OUT) node_modules package-lock.json
 
 # adapted from https://blog.bloomca.me/2017/12/15/how-to-push-folder-to-github-pages.html
 deploy: clean $(OUT)
