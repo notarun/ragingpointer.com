@@ -1,7 +1,7 @@
 ## @notarun's webspace
 [ragingpointer.com](https://ragingpointer.com/)
 
-#### dependencies
+#### build dependencies
 ```
 make
 nodejs
