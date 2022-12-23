@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="arun negi's homepage" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>${title}</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">ragingpointer</a>
+    </header>
+    <main>
+      <h1>Hi, I'm Arun.</h1>
+      <p>You have reached my little corner on the internet.
+      I am a <strong>computer programmer</strong> by profession and passion.
+      FOSS, vim, *nix and digital minimalism are a few topics which makes me excited.
+      I sometimes contribute to open-source,
+      checkout my <a href="https://github.com/notarun">github</a>.</p>
+      <h2>Random notes, thoughts and trash</h2>
+      <ul class="collections">
+        ${for(logs)}
+        <li class="collection-link">
+          <time datetime="${logs.date}">${logs.date}</time>
+          <a href="${logs.path}">${logs.title}</a>
+        </li>
+        ${endfor}
+      </ul>
+    </main>
+  </body>
+</html>

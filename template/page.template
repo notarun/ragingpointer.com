@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="${description}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>${title}</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">ragingpointer</a>
+    </header>
+    <main>
+      <h1 class="title">${title}</h1>
+      ${if(date)}
+      <time datetime="${date}">${date}</time>
+      ${endif}
+      <p>${description}</p>
+      <article>${body}</article>
+    </main>
+  </body>
+</html>

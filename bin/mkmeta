@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+META_DIR="$PWD/.meta"
+CONTENT_DIR="content"
+
+print_help() {
+  # Usage: print_help
+  printf "Usage: mkmeta [input-file] ...\n"
+}
+
+join() {
+  # Usage: join [seperator] [str] ...
+  local IFS="$1"
+  shift
+  echo "$*"
+}
+
+mkmeta() {
+  # Usage: makemeta [input-file] ...
+  template_path="$META_DIR/meta-json.template"
+  printf "\$meta-json\$" > "$template_path"
+
+  meta_arr=()
+  for page in "$@"; do
+    path="${page#"$CONTENT_DIR"}"
+    path="${path%.*}"
+
+    meta=$(pandoc "$page" --template "$template_path" -M path="$path")
+    meta_arr+=("$meta")
+  done
+
+  generated_at=$(date +%Y-%m-%d)
+  pages_meta=$(printf "[%s]" "$(join "," "${meta_arr[@]}")")
+  echo "$pages_meta" | jq --arg generated_at "$generated_at" '{
+    title: "ragingpointer",
+    domain: "https://ragingpointer.com",
+    generated_at: $generated_at,
+    logs: map(select(.date != null)) |
+      sort_by(.date) |
+      reverse
+  }'
+}
+
+[[ "$#" -lt 1 ]] && print_help && exit 1
+
+mkmeta "$@"

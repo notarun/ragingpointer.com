@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+print_help() {
+  # Usage: print_help
+  printf "Usage: mkindex [index.json]\n"
+}
+
+mkindex() {
+  # Usage: mkindex [json-metadata-file]
+  template_path="$PWD/template/index.template"
+
+  pandoc --from markdown --to html --template "$template_path" \
+    --metadata-file "$1" \
+    <(printf '')
+}
+
+[[ "$#" -lt 1 ]] && print_help && exit 1
+
+mkindex "$1"

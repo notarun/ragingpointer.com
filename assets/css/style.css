@@ -1,0 +1,85 @@
+:root {
+  --content-max-width: 750px;
+  --main-bg-color: #FFFFFF;
+  --anchor-color: #DA0037;
+  --font-color: #171717;
+  --color-grey: #444444;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+  color: var(--font-color);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 1em;
+}
+
+header > a {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header > a:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: var(--anchor-color);
+}
+
+::marker, time {
+  color: var(--color-grey);
+}
+
+main > p {
+  font-size: 1.2em;
+}
+
+h1.title {
+  margin-bottom: 0;
+}
+
+ul.collections {
+  padding: 0;
+}
+
+ul.collections > li {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+ul.collections > li > time {
+  font-size: 16px;
+  display: block;
+}
+
+ul.collections > li > a {
+  display: block;
+  text-decoration: none;
+}
+
+ul.collections > li > a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  color: var(--main-bg-color);
+  background: var(--color-grey);
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 16px;
+  padding: 1em;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}

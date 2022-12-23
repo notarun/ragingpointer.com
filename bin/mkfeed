@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+print_help() {
+  # Usage: print_help
+  printf "Usage: mkfeed [index.json]\n"
+}
+
+mkfeed() {
+  # Usage: mkfeed [json-metadata-file]
+  template_path="$PWD/template/feed.template"
+
+  pandoc --from markdown --to html --template "$template_path" \
+    --metadata-file "$1" \
+    <(printf '')
+}
+
+[[ "$#" -lt 1 ]] && print_help && exit 1
+
+mkfeed "$1"
