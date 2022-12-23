@@ -2,6 +2,7 @@
 [ragingpointer.com](https://ragingpointer.com/)
 
 #### build dependencies
+
 ```
 make
 pandoc
@@ -10,6 +11,8 @@ bash
 ```
 
 #### instructions
+
 ```sh
-make         # generate the build
+make
+make gh-pages-deploy
 ```
