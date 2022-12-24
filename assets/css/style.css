@@ -34,6 +34,10 @@ a {
   color: var(--anchor-color);
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 ::marker, time {
   color: var(--color-grey);
 }
