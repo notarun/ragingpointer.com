@@ -10,7 +10,7 @@ print_help() {
 render() {
   # Usage: render "input-file"
   template_path="$PWD/template/page.template"
-  pandoc "$1" --template "$template_path"
+  pandoc -f gfm "$1" --template "$template_path"
 }
 
 [[ "$#" -lt 1 ]] && print_help && exit 1

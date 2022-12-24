@@ -45,4 +45,4 @@ gh-pages-deploy: all $(BUILD)/CNAME
 	&& git remote add origin $(GIT_REPO) \
 	&& git push --force origin master:gh-pages
 
-.PHONY: clean deploy
+.PHONY: clean gh-pages-deploy
