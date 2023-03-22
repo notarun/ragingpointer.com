@@ -66,7 +66,6 @@ ul.collections > li > time {
 }
 
 ul.collections > li > a {
-  display: block;
   text-decoration: none;
 }
 

@@ -1,7 +1,7 @@
 # Adapted from https://www.johnhawthorn.com/2018/01/this-website-is-a-makefile/
 
 BUILD         = build
-MARKDOWNFILES = $(shell find content/ -type f -name '*.md')
+MARKDOWNFILES = $(shell find content -type f -name '*.md')
 HTMLTARGETS	  = $(MARKDOWNFILES:content/%.md=$(BUILD)/%/index.html)
 COMMIT_HASH   = $(shell git rev-parse HEAD)
 GIT_USER      = $(shell git config user.name)
